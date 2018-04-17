@@ -1,4 +1,4 @@
-<section id="work_section">
+<section id="work_section" data-title="Work">
     <div class="right_section pale_grey_back title_block">
         <h3 class="title dark_blue_text">Work</h3>
     </div>

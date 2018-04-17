@@ -24,10 +24,13 @@
 </head>
 <body>
 
-<div class="header_bar lower_bar"></div>
-<div class="header_bar left_bar"></div>
-<div class="header_bar right_bar"></div>
+    <div class="header_bar left_bar"></div>
+    <div class="header_bar right_bar"></div>
+        <div class="header_bar lower_bar">
+            <div class="location_labels" id="lower_label"></div>
+        </div>
 <header class="header_bar">
+    <div class="location_labels" id="upper_label"></div>
     <?php include "partials/_navigation.php"; ?>
 </header>
 

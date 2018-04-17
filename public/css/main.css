@@ -65,9 +65,13 @@ p:last-of-type{
 
 /* Text color classes */
 .dark_blue_text{color: #192734;}
+.dark_blue_text::selection{color: #ffffff; background: #192734;}
 .mid_blue_text{color: #2439a4;}
+.mid_blue_text::selection{color: #ffffff; background: #2439a4;}
 .light_blue_text{color: #4296ec;}
+.light_blue_text::selection{color: #192734; background: #4296ec;}
 .white_text{color: #ffffff;}
+.white_text::selection{color: #192734; background: #ffffff;}
 
 /* Background color classes */
 .dark_blue_back{background: #192734;}
@@ -139,6 +143,8 @@ section .lower_section .left_section, section .lower_section .right_section{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    outline: none;
+    user-select: none;
 }
 
 .col_floater{
@@ -150,6 +156,10 @@ section .lower_section .left_section, section .lower_section .right_section{
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     padding: 40px;
+}
+
+section .lower_section .right_section .col_floater{
+    padding: 0px;
 }
 
 .title{
@@ -193,6 +203,16 @@ section .upper_section .title{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1100px){
+    section .lower_section .right_section .col_floater{
+        position: relative;
+        top: initial;
+        left: initial;
+        -webkit-transform: initial;
+        transform: initial;
+    }
 }
 
 @media screen and (max-width: 1000px){
@@ -257,6 +277,26 @@ section .upper_section .title{
         float: none;
     }
 
+    section .lower_section, section .left_section, section .right_section{
+        padding: 40px 20px;
+    }
+
+    section .lower_section .left_section, section .lower_section .right_section{
+        padding: 0px;
+    }
+
+    section .upper_section .title{
+        position: relative;
+        top: initial;
+        left: initial;
+        -webkit-transform: initial;
+        transform: initial;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        line-height: calc(25vh - 80px);
+    }
+
     .col_floater{
         width: 100%;
         display: block;
@@ -311,7 +351,7 @@ section .upper_section .title{
         min-height: calc(75vh - 80px);
         display: block;
         position: relative;
-        padding: 40px 80px;
+        padding: 40px 20px;
     }
 }
 
@@ -320,9 +360,13 @@ section .upper_section .title{
         padding: 40px 20px;
     }
 
+    section .lower_section .left_section, section .lower_section .right_section{
+        padding: 0px;
+    }
+
     .portrait_image{
         width: 60%;
-        margin-bottom: 0px;
+        margin-bottom: 40px;
     }
 }
 
@@ -555,6 +599,8 @@ section#hero_section .left_section, section#hero_section .right_section{
     right: 40px;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
+    outline: none;
+    user-select: none;
 }
 
 .home_section{
@@ -628,6 +674,7 @@ section#hero_section .left_section, section#hero_section .right_section{
         left: 50%;
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+        padding: 0;
     }
 
     .home_section h1{
@@ -739,6 +786,10 @@ section#hero_section .left_section, section#hero_section .right_section{
     text-align: center;
     letter-spacing: 1px;
     user-select: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 #tech_section .green_book .book_label{
@@ -837,6 +888,7 @@ section#hero_section .left_section, section#hero_section .right_section{
 
     #tech_section .book_label span{
         width: 100%;
+        height: 40px;
         display: block;
         position: relative;
         top: initial;

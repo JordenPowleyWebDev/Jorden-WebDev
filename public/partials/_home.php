@@ -1,5 +1,5 @@
 
-<section id="hero_section">
+<section id="hero_section" data-title="Home">
     <div class="left_section mid_blue_back">
         <div class="home_portrait">
             <img src="media/body_white.svg">

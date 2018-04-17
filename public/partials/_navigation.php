@@ -8,7 +8,7 @@
     </div>
     <nav>
         <a href="#bio_section" class="nav_link">bio</a>
-        <a href="#experience_section" class="nav_link">exp</a>
+        <a href="#exp_section" class="nav_link">exp</a>
         <a href="#work_section" class="nav_link">work</a>
         <a href="#contact_section" class="nav_link">contact</a>
         <div class="clearfix"></div>

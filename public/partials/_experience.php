@@ -1,4 +1,4 @@
-<section id="exp_section">
+<section id="exp_section" data-title="Exp">
     <div class="left_section pale_grey_back title_block">
         <h3 class="title light_blue_text">Exp</h3>
     </div>

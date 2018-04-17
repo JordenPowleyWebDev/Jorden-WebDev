@@ -1,4 +1,4 @@
-<section id="tech_section">
+<section id="tech_section" data-title="Tech">
     <div class="upper_section mid_blue_back">
         <h3 class="title white_text">Tech</h3>
     </div>
