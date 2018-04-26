@@ -14,8 +14,9 @@
 
     <title>Jorden Powley</title>
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="icon" type="image/png" href="media/favicon.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -40,6 +41,13 @@
     <?php include "partials/_tech.php"; ?>
     <?php include "partials/_work.php"; ?>
     <?php include "partials/_contact.php"; ?>
+</div>
+<div id="resizing_overlay" class="dark_blue_back">
+    <div class="overlay_wrapper">
+        <img src="media/baseball_white.svg" class="overflow_image">
+        <div class="overflow_title white_text">Woah There!!</div>
+        <div class="overflow_text white_text">What're you tring to prove?</div>
+    </div>
 </div>
 </body>
 </html>

@@ -10,6 +10,8 @@
 // ------------------------------------------------
 var originalScreenWidth = $(window).width();
 var originalScreenHeight = $(window).height();
+var originalRatio = originalScreenWidth / originalScreenHeight;
+
 var screenHeight = originalScreenHeight;
 var screenWidth = originalScreenWidth;
 var sectionTitles = [];
@@ -104,6 +106,27 @@ function screenDimensions(){
     viewportUpper = (screenHeight / 100) * 40;
     viewportMid = (screenHeight / 100) * 50;
     viewportLower = (screenHeight / 100) * 60;
+
+    // Calculate the new ratio
+    var newRatio = screenWidth / screenHeight;
+
+    // See if new ratio is within 10% of the original
+    var lowerPerc = originalRatio * 0.9;
+    var upperPerc = originalRatio * 1.1;
+    console.log("----------------");
+    console.log(originalRatio);
+    console.log(lowerPerc);
+    console.log(newRatio);
+    console.log(upperPerc);
+    console.log("----------------");
+    if((lowerPerc <= newRatio) && (newRatio <= upperPerc)){
+        // Ratio changed back -> Open overlay
+        closeOverlay();
+
+    } else{
+        // Ratio changed back
+        openOverlay();
+    }
 }
 
 /**
@@ -273,4 +296,24 @@ function navigate(navItem){
     $('html, body').animate({
         scrollTop: $(target).offset().top - 80
     }, 1500);
+}
+
+// ------------------------------------------------
+// ---------------Overlay Functions----------------
+// ------------------------------------------------
+
+/**
+ * openOverlay()
+ * @desc - Opens the overlay after a screen ratio change
+ */
+function openOverlay(){
+    $('#resizing_overlay').addClass('active');
+}
+
+/**
+ * closeOverlay()
+ * @desc - Closes the overlay after a screen ratio change
+ */
+function closeOverlay() {
+    $('#resizing_overlay').removeClass('active');
 }

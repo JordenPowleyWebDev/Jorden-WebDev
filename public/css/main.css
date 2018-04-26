@@ -135,8 +135,8 @@ section .lower_section .left_section, section .lower_section .right_section{
 }
 
 .portrait_image{
-    width: 50%;
-    max-width: 200px;
+    width: 60%;
+    max-width: 240px;
     display: block;
     position: absolute;
     top: 50%;
@@ -165,10 +165,11 @@ section .lower_section .right_section .col_floater{
 .title{
     font-family: 'Raleway', sans-serif;
     font-size: 4rem;
-    text-transform: capitalize;
+    text-transform: lowercase;
     text-align: right;
     cursor: default;
     user-select: none;
+    letter-spacing: -1px;
 }
 
 section .left_section .title{
@@ -203,6 +204,15 @@ section .upper_section .title{
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 1300px){
+    .col_floater{
+        position: relative;
+        top: initial;
+        left: initial;
+        transform: initial;
+    }
 }
 
 @media screen and (max-width: 1100px){
@@ -246,6 +256,10 @@ section .upper_section .title{
 
     section .text_block{
         width: 70%;
+    }
+
+    section .lower_section .left_section p{
+        text-align: left;
     }
 }
 
@@ -416,7 +430,9 @@ header{
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-transform: lowercase;
+    letter-spacing: -1px;
     cursor: pointer;
     user-select: none;
     opacity: 0;
@@ -936,3 +952,188 @@ section#hero_section .left_section, section#hero_section .right_section{
 /* -----------Contact Section Styling----------- */
 /* --------------------------------------------- */
 /* --------------------------------------------- */
+#contact_section .lower_section{
+    padding-right: 0px;
+}
+
+.contact_item{
+    width: 100%;
+    height: 40px;
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.contact_item i{
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.contact_item a, .contact_item a:active, .contact_item a:visited{
+    height: auto;
+    display: block;
+    position: relative;
+    float: left;
+    font-size: 1.4rem;
+    text-align: left;
+    text-transform: lowercase;  
+    text-decoration: none;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1300px){
+    #contact_section .col_floater{
+        position: absolute;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (max-width: 1100px){
+    .contact_item i{
+        margin-left: 0px;
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+    .contact_item a, .contact_item a:active, .contact_item a:visited{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #contact_section .lower_section{
+        padding-right: 40px;
+    }
+
+    #contact_section .col_floater{
+        width: 60%;
+        min-width: 350px;
+        position: relative;
+        top: initial;
+        -webkit-transform: initial;
+        transform: initial;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 400px){
+    #contact_section .col_floater{
+        width: 100%;
+        min-width: 0px;
+    }
+
+    .contact_item{
+        height: auto;
+    }
+
+    .contact_item i{
+        width: 100%;
+    }
+
+    .contact_item a, .contact_item a:active, .contact_item a:visited{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* ------------Sneaky Overlay Styling----------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+#resizing_overlay{
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+    display: block;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#resizing_overlay.active{
+    top: 0;
+    pointer-events: auto;
+}
+
+#resizing_overlay .overlay_wrapper{
+    width: 100vw;
+    display: block;
+    position: relative;
+    padding: 80px;
+}
+
+#resizing_overlay .overflow_image{
+    width: 30%;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    -webkit-transition: initial;
+    transition: initial;
+}
+
+#resizing_overlay .overflow_title{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 3rem;
+    text-align: center;
+    text-transform: lowercase;   
+    -webkit-transition: initial;
+    transition: initial;
+}
+
+#resizing_overlay .overflow_text{
+    width: 100%;
+    display: block;
+    position: relative;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    text-align: center;
+    -webkit-transition: initial;
+    transition: initial;
+}
+
+@media screen and (max-width: 1000px){
+    #resizing_overlay .overflow_image{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #resizing_overlay .overlay_wrapper{
+        padding: 20px;
+    }
+    
+    #resizing_overlay .overflow_title{
+        font-size: 2rem;
+    }
+
+    #resizing_overlay .overflow_text{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 350px){
+    #resizing_overlay .overflow_image{
+        width: 50%;
+    }
+}
