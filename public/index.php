@@ -19,20 +19,19 @@
     <link rel="stylesheet" href="/css/main.css" type="text/css">
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js" type="text/javascript"></script>
     <script src="/js/main.js" type="text/javascript"></script>
 </head>
 <body>
 
     <div class="header_bar left_bar"></div>
     <div class="header_bar right_bar"></div>
-        <div class="header_bar lower_bar">
-            <div class="location_labels" id="lower_label"></div>
-        </div>
-<header class="header_bar">
-    <div class="location_labels" id="upper_label"></div>
-    <?php include "partials/_navigation.php"; ?>
-</header>
+    <div class="header_bar lower_bar">
+        <div class="location_labels dark_blue_text no_flicker" id="lower_label"></div>
+    </div>
+    <header class="header_bar">
+        <div class="location_labels dark_blue_text no_flicker" id="upper_label"></div>
+        <?php include "partials/_navigation.php"; ?>
+    </header>
 
 <div class="body_container">
     <?php include "partials/_home.php"; ?>

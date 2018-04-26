@@ -410,6 +410,23 @@ header{
     right: 0;
 }
 
+.location_labels{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+}
+
+.location_labels.visible{
+    left: 40px;
+    opacity: 1;
+}
+
 @media screen and (max-width: 900px){
     .lower_bar, .left_bar, .right_bar{
         display: none;

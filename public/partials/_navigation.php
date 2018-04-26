@@ -7,10 +7,10 @@
         <div class="hamburger_line cross_axis neg no_flicker"></div>
     </div>
     <nav>
-        <a href="#bio_section" class="nav_link">bio</a>
-        <a href="#exp_section" class="nav_link">exp</a>
-        <a href="#work_section" class="nav_link">work</a>
-        <a href="#contact_section" class="nav_link">contact</a>
+        <a href="#bio_section" class="nav_link no_flicker">bio</a>
+        <a href="#exp_section" class="nav_link no_flicker">exp</a>
+        <a href="#work_section" class="nav_link no_flicker">work</a>
+        <a href="#contact_section" class="nav_link no_flicker">contact</a>
         <div class="clearfix"></div>
     </nav>
     <div class="clearfix"></div>
