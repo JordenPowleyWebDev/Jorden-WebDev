@@ -70,7 +70,7 @@
             <div class="tech_book blue_book">
                 <div class="book_icon"></div>
                 <div class="book_label">
-                    <span>Beerology</span>
+                    <span>Beer-o-script</span>
                 </div>
                 <div class="book_publish"></div>
             </div>

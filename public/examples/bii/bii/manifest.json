@@ -1,0 +1,14 @@
+{
+  "orientation": "portrait",
+  "background_color": "#ac56c6",
+  "name": "BII",
+  "short_name": "BII",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "http://img2.email2inbox.co.uk/2017/bii/bii_app_icon.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    }
+  ]
+}

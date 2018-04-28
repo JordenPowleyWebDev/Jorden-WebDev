@@ -113,12 +113,7 @@ function screenDimensions(){
     // See if new ratio is within 10% of the original
     var lowerPerc = originalRatio * 0.9;
     var upperPerc = originalRatio * 1.1;
-    console.log("----------------");
-    console.log(originalRatio);
-    console.log(lowerPerc);
-    console.log(newRatio);
-    console.log(upperPerc);
-    console.log("----------------");
+
     if((lowerPerc <= newRatio) && (newRatio <= upperPerc)){
         // Ratio changed back -> Open overlay
         closeOverlay();
@@ -293,9 +288,16 @@ function navigate(navItem){
     // Get the target section fromn the nav item
     var target = $(navItem).attr('href');
 
-    $('html, body').animate({
-        scrollTop: $(target).offset().top - 80
-    }, 1500);
+    // Check if the target is to go to an anchor link
+    if (target.indexOf('#') > -1){
+        // Anchor link is target -> Scroll
+        $('html, body').animate({
+            scrollTop: $(target).offset().top - 80
+        }, 1500);   
+    } else{
+        // None anchor link - Redirect
+        window.location.replace(target);
+    }
 }
 
 // ------------------------------------------------

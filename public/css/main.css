@@ -13,8 +13,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in;
 }
 
 /* --------------------------------------------- */
@@ -79,6 +77,11 @@ p:last-of-type{
 .light_blue_back{background: #4296ec;}
 .pale_blue_back{background: #f1f5f9;}
 .pale_grey_back{background: #f2f2f2;}
+
+.transition{
+    -webkit-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
+}
 
 section{
     width: 100%;
@@ -439,6 +442,7 @@ header{
 }
 
 .location_labels.visible{
+    z-index: 2000;
     left: 40px;
     opacity: 1;
 }
@@ -758,6 +762,97 @@ section#hero_section .left_section, section#hero_section .right_section{
 /* -------------Work Section Styling------------ */
 /* --------------------------------------------- */
 /* --------------------------------------------- */
+#work_section .mobile_outer{
+    width: 362px;
+    height: 610px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+}
+
+#work_section .mobile_inner{
+    width: 320px;
+    height: 568px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #ffffff;
+    overflow-y: auto;
+}
+
+#work_section .work_tile, #work_section .work_tile:active, #work_section .work_tile:visited{
+    width: 100%;
+    height: 40px;
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffffff;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: right;
+    text-decoration: none;
+    line-height: 38px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    user-select: none;
+}
+
+#work_section .work_tile:last-of-type{
+    margin-bottom: 0px;
+}
+
+#work_section .work_tile:hover{
+    color: #192734;
+    background: #ffffff;
+}
+
+@media screen and (max-width: 650px){
+    #work_section .mobile_outer{
+        position: relative;
+        top: initial;
+        right: initial;
+        -webkit-transform: initial;
+        transform: initial;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 420px){
+    #work_section .mobile_outer{
+        width: 100%;
+        height: auto;
+        border: 0;
+        border-radius: 0px;
+    }
+
+    #work_section .mobile_inner{
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: initial;
+        left: initial;
+        -webkit-transform: initial;
+        transform: initial;
+        padding: 0;
+        border: 0;
+    }
+
+    #work_section .work_tile, #work_section .work_tile:active, #work_section .work_tile:visited{
+        font-size: 0.8rem;
+    }
+}
 
 /* --------------------------------------------- */
 /* --------------------------------------------- */
@@ -1062,6 +1157,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     position: fixed;
     top: -100vh;
     left: 0;
+    padding: 40px;
     overflow: hidden;
     pointer-events: none;
 }
@@ -1072,21 +1168,40 @@ section#hero_section .left_section, section#hero_section .right_section{
 }
 
 #resizing_overlay .overlay_wrapper{
-    width: 100vw;
+    width: 100%;
+    height: calc(100vh - 80px);
     display: block;
     position: relative;
-    padding: 80px;
+    padding: 40px;
+    border: 1px solid #ffffff;
+}
+
+#resizing_overlay .overlay_inner{
+    width: 100%;
+    height: calc(100vh - 162px);
+    display: block;
+    position: relative;
+    padding: 40px;
+    overflow: hidden;
 }
 
 #resizing_overlay .overflow_image{
-    width: 30%;
+    height: calc(100vh - 162px);
     display: block;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 40px;
-    -webkit-transition: initial;
-    transition: initial;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+}
+
+#resizing_overlay .overlay_text_container{
+    width: 50%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 #resizing_overlay .overflow_title{
@@ -1095,45 +1210,106 @@ section#hero_section .left_section, section#hero_section .right_section{
     position: relative;
     margin-bottom: 40px;
     font-size: 3rem;
-    text-align: center;
-    text-transform: lowercase;   
-    -webkit-transition: initial;
-    transition: initial;
+    text-align: right;
+    text-transform: lowercase;
 }
 
 #resizing_overlay .overflow_text{
     width: 100%;
     display: block;
     position: relative;
-    margin-bottom: 40px;
     font-size: 2rem;
-    text-align: center;
-    -webkit-transition: initial;
-    transition: initial;
+    text-align: right;
 }
 
 @media screen and (max-width: 1000px){
     #resizing_overlay .overflow_image{
-        width: 50%;
+        height: calc(60vh - 162px);
+    }
+
+    #resizing_overlay .overlay_text_container{
+        width: 75%;
     }
 }
 
-@media screen and (max-width: 650px){
-    #resizing_overlay .overlay_wrapper{
-        padding: 20px;
-    }
-    
-    #resizing_overlay .overflow_title{
-        font-size: 2rem;
+@media screen and (max-width: 800px){
+    #resizing_overlay .overlay_inner{
+        padding: 0;
     }
 
-    #resizing_overlay .overflow_text{
-        font-size: 1.5rem;
-    }
-}
-
-@media screen and (max-width: 350px){
     #resizing_overlay .overflow_image{
-        width: 50%;
+        width: 75%;
+        height: auto;   
+        display: block;
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
+
+    #resizing_overlay .overlay_text_container{
+        width: 100%;
+        position: relative;
+        top: initial;
+        right: initial;
+        -webkit-transform: initial;
+        transform: initial;
+    }
+
+    #resizing_overlay .overflow_title, #resizing_overlay .overflow_text{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* -------------Mobile Viewer Styling----------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+.header_label{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    transform: translateY(-50%);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: -1  px;
+    cursor: pointer;
+    user-select: none;
+}
+
+#mobile_viewer .mobile_viewer_outer{
+    width: 382px;
+    height: 610px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    background: #fff;   
+}
+
+#mobile_viewer .mobile_viewer_inner{
+    width: 340px;
+    height: 568px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow-y: auto;
+}
+
+#mobile_viewer iframe{
+    width: 340px;
+    height: 568px;
+    display: block;
+    position: relative;
 }
