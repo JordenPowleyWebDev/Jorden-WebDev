@@ -17,10 +17,10 @@
     <link rel="icon" type="image/png" href="media/favicon.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </head>
 <body>
 

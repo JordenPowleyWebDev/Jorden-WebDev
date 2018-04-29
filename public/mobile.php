@@ -1,3 +1,19 @@
+<?php
+
+/**
+ * ------------------------------------------------------------
+ * Jorden WebDev - Mobile Viewer
+ * ------------------------------------------------------------
+ */
+
+// Ensure that page is passed in the GET
+if(!array_key_exists("page", $_GET) || !isset($_GET['page']) || empty($_GET['page'])){
+    // Page not set -> Redirect
+    header("Location: /");
+}
+
+?>
+
 <!DOCTYPE html>
 <!--[if lte IE 6]><html class="preIE7 preIE8 preIE9"><![endif]-->
 <!--[if IE 7]><html class="preIE8 preIE9"><![endif]-->
@@ -17,12 +33,12 @@
     <link rel="icon" type="image/png" href="media/favicon.png" sizes="16x16">
     <link href="https://fonts.googleapis.com/css?family=Lato:300|Raleway:300" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css" type="text/css">
+    <link rel="stylesheet" href="css/main.css" type="text/css">
     
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
-    <script src="/js/main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 </head>
-<body>
+<body id="mobile_page">
 
     <div class="header_bar left_bar"></div>
     <div class="header_bar right_bar"></div>
@@ -36,7 +52,7 @@
     <section id="mobile_viewer" class="mid_blue_back">
         <div class="mobile_viewer_outer">
             <div class="mobile_viewer_inner">
-                <iframe src="<?php echo $example; ?>" frameborder="0"></iframe>
+                <iframe src="<?php echo $_GET['page']; ?>" frameborder="0"></iframe>
             </div>
         </div>
     </section>

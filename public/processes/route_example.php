@@ -43,8 +43,8 @@ if(!isset($_GET['example']) || empty($_GET['example']) || !array_key_exists('exa
     // Site exists -> See what view is required
     if($view === "mobile"){
         // Redirect within a mobile view
-        include "../mobile.php";
-    } else{
+        redirect("../mobile.php?page=" . urlencode($example));
+    } else{ 
         // Redirect to site
         redirect($example);
     }

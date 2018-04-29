@@ -1,0 +1,23 @@
+[
+    {
+        "TITLE": "Butcombe Loyalty",
+        "DISPLAY": "DESK",
+        "URL": "#"
+    }, {
+        "TITLE": "Gift Card Widget",
+        "DISPLAY": "DESK",
+        "URL": "https://nwtc.uk.com/giftcards"
+    },{
+        "TITLE": "Stonegate Marketing",
+        "DISPLAY": "DESK",
+        "URL": "https://clientdemos.txdlimited.co.uk/2016/stonegate/iteration3.php"
+    },{
+        "TITLE": "ALMR SKI 2018",
+        "DISPLAY": "MOBILE",
+        "URL": "http://almr.liveres.co.uk"
+    },{
+        "TITLE": "BII SUMMER 2017",
+        "DISPLAY": "MOBILE",
+        "URL": "http://clientdemos.txdlimited.co.uk/bii"
+    }
+]
