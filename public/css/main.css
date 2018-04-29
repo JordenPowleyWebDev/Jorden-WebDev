@@ -1167,7 +1167,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     pointer-events: auto;
 }
 
-#resizing_overlay .overlay_wrapper{
+.overlay_wrapper{
     width: 100%;
     height: calc(100vh - 80px);
     display: block;
@@ -1176,7 +1176,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     border: 1px solid #ffffff;
 }
 
-#resizing_overlay .overlay_inner{
+.overlay_inner{
     width: 100%;
     height: calc(100vh - 162px);
     display: block;
@@ -1185,7 +1185,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     overflow: hidden;
 }
 
-#resizing_overlay .overflow_image{
+.overflow_image{
     height: calc(100vh - 162px);
     display: block;
     position: absolute;
@@ -1194,7 +1194,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     transform: translate(-50%, -50%);
 }
 
-#resizing_overlay .overlay_text_container{
+.overlay_text_container{
     width: 50%;
     display: block;
     position: absolute;
@@ -1203,8 +1203,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-
-#resizing_overlay .overflow_title{
+.overflow_title{
     width: 100%;
     display: block;
     position: relative;
@@ -1214,7 +1213,7 @@ section#hero_section .left_section, section#hero_section .right_section{
     text-transform: lowercase;
 }
 
-#resizing_overlay .overflow_text{
+.overflow_text{
     width: 100%;
     display: block;
     position: relative;
@@ -1223,21 +1222,21 @@ section#hero_section .left_section, section#hero_section .right_section{
 }
 
 @media screen and (max-width: 1000px){
-    #resizing_overlay .overflow_image{
+    .overflow_image{
         height: calc(60vh - 162px);
     }
 
-    #resizing_overlay .overlay_text_container{
+    .overlay_text_container{
         width: 75%;
     }
 }
 
 @media screen and (max-width: 800px){
-    #resizing_overlay .overlay_inner{
+    .overlay_inner{
         padding: 0;
     }
 
-    #resizing_overlay .overflow_image{
+    .overflow_image{
         width: 75%;
         height: auto;   
         display: block;
@@ -1247,7 +1246,7 @@ section#hero_section .left_section, section#hero_section .right_section{
         transform: translate(-50%, -50%);
     }
 
-    #resizing_overlay .overlay_text_container{
+    .overlay_text_container{
         width: 100%;
         position: relative;
         top: initial;
@@ -1256,7 +1255,7 @@ section#hero_section .left_section, section#hero_section .right_section{
         transform: initial;
     }
 
-    #resizing_overlay .overflow_title, #resizing_overlay .overflow_text{
+    .overflow_title, .overflow_text{
         font-size: 1.5rem;
         text-align: center;
     }
@@ -1334,5 +1333,83 @@ section#hero_section .left_section, section#hero_section .right_section{
         padding: 0;
         border: none;
         background: transparent;
+    }
+}
+
+
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* ------------Landscape Page Styling----------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+#landscape_overlay{
+    display: none;
+}
+
+@media screen and (max-width: 812px) and (max-height: 414px){
+    #landscape_overlay{
+        width: 100%;
+        height: 100vh;
+        z-index: 1500;
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 20px;
+    }
+
+    #landscape_overlay .overlay_wrapper{
+        width: 100%;
+        height: calc(100vh - 40px);
+        display: block;
+        position: relative;
+        padding: 20px;
+        border: 1px solid #ffffff;
+    }
+
+    #landscape_overlay .overlay_inner{
+        width: 100%;
+        height: calc(100vh - 82px);
+        display: block;
+        position: relative;
+        padding: 0px;
+        overflow: hidden;
+    }
+
+    #landscape_overlay .overflow_image{
+        height: calc(60vh);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+    }
+
+    #landscape_overlay .overlay_text_container{
+        width: 50%;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 40px;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    #landscape_overlay .overflow_title{
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-bottom: 40px;
+        font-size: 3rem;
+        text-align: right;
+        text-transform: lowercase;
+    }
+
+    #landscape_overlay .overflow_text{
+        width: 100%;
+        display: block;
+        position: relative;
+        font-size: 2rem;
+        text-align: right;
     }
 }

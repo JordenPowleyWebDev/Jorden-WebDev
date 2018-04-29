@@ -53,5 +53,16 @@
         </div>
     </div>
 </div>
+<div id="landscape_overlay" class="mid_blue_back">
+    <div class="overlay_wrapper">
+        <div class="overlay_inner">
+            <img src="media/baseball_white.svg" class="overflow_image transition">
+            <div class="overlay_text_container">
+                <div class="overflow_title white_text transition">Woah There!!</div>
+                <div class="overflow_text white_text transition">Landscape Please</div> 
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
